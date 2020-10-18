@@ -9,7 +9,7 @@ server.use(cors());
 server.use(express.json());
 
 server.get('/', (req, res) => {
-  res.status(200).json({ API: 'Running' });
+  res.status(200).json({ API: 'running' });
 });
 
 module.exports = server;
