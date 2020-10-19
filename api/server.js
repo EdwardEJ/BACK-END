@@ -16,8 +16,8 @@ server.use(cors());
 server.use(express.json());
 
 //endpoints
-server.use('/api/projects', authenticate, projectsRouter);
-server.use('/api/auth', usersRouter);
+server.use('/projects', authenticate, projectsRouter);
+server.use('/auth', usersRouter);
 
 server.get('/', (req, res) => {
   res.sendFile(path.join(__dirname + '/test.html'));
