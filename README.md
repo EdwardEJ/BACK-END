@@ -6,7 +6,7 @@
 
 #### Axios call for registering a new user:
 
-`axios.post(https://virtualrealityfunding.herokuapp.com/api/auth/register)`
+`axios.post(https://virtualrealityfunding.herokuapp.com/auth/register)`
 
 - Required fields to register:
 
@@ -33,7 +33,7 @@
 }
 ```
 
-`axiosWithAuth().post(https://virtualrealityfunding.herokuapp.com/api/auth/login, credentials)`
+`axiosWithAuth().post(https://virtualrealityfunding.herokuapp.com/auth/login, credentials)`
 
 - Required fields to login:
 
@@ -84,7 +84,7 @@
 
 #### Axios call for registering a new user:
 
-`axios.get(https://virtualrealityfunding.herokuapp.com/api/projects)` (requires token)
+`axios.get(https://virtualrealityfunding.herokuapp.com/projects)` (requires token)
 
 ## Endpoints
 
