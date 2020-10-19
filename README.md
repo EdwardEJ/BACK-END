@@ -28,7 +28,7 @@
     "id": 1,
     "username": "example"
     "email": "example@email.com",
-    "password": "$2a$08$0etMJmlr3.7JokXFU95QC.t4GZBxrN9Tob6BnRxcTquzoKOYmzLmu"
+    "password": "$2a$08$0etMJmlr3.7JokXFU95QC"
   }
 }
 ```
@@ -52,7 +52,7 @@
 ```
 {
     "message": "Welcome to Virtual Reality Funding",
-    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImQiLCJpZCI6MSwiaWF0IjoxNjAzMDg0MTc3LCJleHAiOjE2MDMxMTI5Nzd9.kJFPktLptVna8S4dkDI3hsiMABhRLqORTxrZUqMuaCY"
+    "token": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VybmFtZSI6ImQiLCJpZCI6MSwiaWF0IjoxNjAzMDg0MTc3LCJleHAiOjE2MDMxMTI5Nzd9"
 }
 ```
 
