@@ -1,6 +1,7 @@
 const express = require('express');
 const helmet = require('helmet');
 const cors = require('cors');
+const path = require('path');
 
 const server = express();
 
@@ -19,7 +20,7 @@ server.use('/api/projects', authenticate, projectsRouter);
 server.use('/api/auth', usersRouter);
 
 server.get('/', (req, res) => {
-  res.status(200).json({ API: 'running' });
+  res.sendFile(path.join(__dirname + '/test.html'));
 });
 
 module.exports = server;
