@@ -18,6 +18,7 @@
   "email": "example@email.com",
   "password": "password",
   "roles": ["role1, role2"]
+}
 ```
 
 ###### Returns:
