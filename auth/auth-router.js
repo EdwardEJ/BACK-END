@@ -5,7 +5,7 @@ const bcryptjs = require('bcryptjs');
 const config = require('../api/config');
 
 const Users = require('../users/users-model');
-const { isValid } = require('../users/users-service');
+const { isValid } = require('../users/user-service');
 
 router.post('/register', (req, res) => {
   const credentials = req.body;
@@ -29,23 +29,25 @@ router.post('/register', (req, res) => {
   } else {
     res.status(400).json({
       message:
-        'please provide username and password and the password shoud be alphanumeric',
+        'Please provide username, email, and password and the password shoud be alphanumeric',
     });
   }
 });
 
 router.post('/login', (req, res) => {
   // implement login
-  const { username, password } = req.body;
+  const { username, email, password } = req.body;
 
   if (isValid(req.body)) {
-    Users.findBy({ username: username })
+    Users.findBy({ username: username, email: email })
       .then(([user]) => {
         // compare the password the hash stored in the database
         if (user && bcryptjs.compareSync(password, user.password)) {
           const token = getJwt(user);
 
-          res.status(200).json({ message: 'Welcome to our API', token });
+          res
+            .status(200)
+            .json({ message: 'Welcome to Virtual Reality Funding', token });
         } else {
           res.status(401).json({ message: 'Invalid credentials' });
         }
@@ -56,7 +58,7 @@ router.post('/login', (req, res) => {
   } else {
     res.status(400).json({
       message:
-        'please provide username and password and the password shoud be alphanumeric',
+        'Please provide username, email, and password and the password shoud be alphanumeric',
     });
   }
 });
@@ -65,6 +67,7 @@ function getJwt(user) {
   const payload = {
     username: user.username,
     role: user.role,
+    id: user.id,
   };
 
   const jwtOtions = {

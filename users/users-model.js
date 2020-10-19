@@ -6,12 +6,14 @@ module.exports = {
   add,
 };
 
-const findById = (id) => {
+function findById(id) {
   return db('users').where({ id }).first();
-};
+}
 
 function findBy(filter) {
-  return db('users').select('id', 'name', 'email', 'password').where(filter);
+  return db('users')
+    .select('id', 'username', 'email', 'password')
+    .where(filter);
 }
 
 function add(user) {

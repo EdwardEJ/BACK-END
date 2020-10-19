@@ -7,7 +7,7 @@ exports.up = function (knex) {
       tbl.string('email').notNullable().unique();
       tbl.string('password').notNullable();
 
-      tbl.jsonb('roles').nullable();
+      tbl.json('roles').nullable();
     })
 
     .createTable('projects', (tbl) => {
