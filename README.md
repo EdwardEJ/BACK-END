@@ -86,18 +86,11 @@
 
 ## Endpoints
 
-|    Route     | Method | Endpoint         | Description                                                                 | Required                  |
-| :----------: | :----: | ---------------- | --------------------------------------------------------------------------- | ------------------------- |
-|   **Auth**   |  POST  | /auth/register   | Creates a new user                                                          | email, username, password |
-|              |  POST  | /auth/login      | Logs in a user, returns a token to be added to the header of other requests | username, password        |
-| **Articles** |  GET   | /articles        | Returns a list of public articles                                           | No token required         |
-|  **Boards**  |  GET   | /boards          | Returns a list of boards in the database                                    | token                     |
-|              |  GET   | /boards/user/:id | Returns boards of logged in user by user id                                 | token                     |
-|              |  GET   | /boards/:id      | Returns specified board by id                                               | token                     |
-|              |  POST  | /boards          | Adds a new board, returns the added board                                   | token                     |
-|              |  PUT   | /boards/:id      | Updates the specipecified board by id                                       | token                     |
-|              | DELETE | /boards/:id      | Deletes the specified board by id                                           | token                     |
-|  **Users**   |  GET   | /users           | Returns a list of users in the database                                     | token                     |
-|              |  GET   | /users/:id       | Returns the specified user by id                                            | token                     |
-|              |  PUT   | /users/:id       | Updates the specified user by id                                            | token                     |
-|              | DELETE | /users/:id       | Deletes the specified user by id                                            | token                     |
+|    Route     | Method | Endpoint       | Description                                                                 | Required                  |
+| :----------: | :----: | -------------- | --------------------------------------------------------------------------- | ------------------------- |
+|   **Auth**   |  POST  | /auth/register | Creates a new user                                                          | email, username, password |
+|              |  POST  | /auth/login    | Logs in a user, returns a token to be added to the header of other requests | username, password        |
+| **Projects** |  GET   | /projects      | Returns a list of projects                                                  | token                     |
+|              |  GET   | /projects/:id  | Returns projects of user by user id                                         | token                     |
+|              |  POST  | /projects      | Adds a new project, returns the added board                                 | token                     |
+|              | DELETE | /projects/:id  | Deletes the specified board by id                                           | token                     |
