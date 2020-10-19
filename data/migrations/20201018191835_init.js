@@ -6,6 +6,8 @@ exports.up = function (knex) {
       tbl.string('username').notNullable().unique();
       tbl.string('email').notNullable().unique();
       tbl.string('password').notNullable();
+
+      tbl.jsonb('roles').nullable();
     })
 
     .createTable('projects', (tbl) => {
