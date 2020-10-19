@@ -2,15 +2,17 @@ const db = require('../data/db-config');
 
 module.exports = {
   getAll,
-  add,
+  insert,
   remove,
+  findById,
+  updateProject,
 };
 
 function getAll() {
   return db('projects');
 }
 
-function add(project, id) {
+function insert(project, id) {
   project.user_id = id;
   return db('projects')
     .insert(project, 'id')
@@ -22,6 +24,14 @@ function add(project, id) {
     .catch((err) => {
       console.log(err);
     });
+}
+
+function updateProject(id, changes) {
+  return db('projects').where({ id }).update(changes);
+}
+
+function findById(id) {
+  return db('projects').where({ id }).first();
 }
 
 function remove(id) {

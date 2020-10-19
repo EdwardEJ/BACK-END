@@ -89,11 +89,13 @@
 
 ## Endpoints
 
-|    Route     | Method | Endpoint       | Description                                                                 | Required                  |
-| :----------: | :----: | -------------- | --------------------------------------------------------------------------- | ------------------------- |
-|   **Auth**   |  POST  | /auth/register | Creates a new user                                                          | email, username, password |
-|              |  POST  | /auth/login    | Logs in a user, returns a token to be added to the header of other requests | email, username, password |
-| **Projects** |  GET   | /projects      | Returns a list of projects                                                  | token                     |
-|              |  GET   | /projects/:id  | Returns projects of user by user id                                         | token                     |
-|              |  POST  | /projects      | Adds a new project, returns the added project                               | token                     |
-|              | DELETE | /projects/:id  | Deletes the project board by id                                             | token                     |
+|    Route     | Method | Endpoint           | Description                                                                 | Required                  |
+| :----------: | :----: | ------------------ | --------------------------------------------------------------------------- | ------------------------- |
+|   **Auth**   |  POST  | /auth/register     | Creates a new user                                                          | email, username, password |
+|              |  POST  | /auth/login        | Logs in a user, returns a token to be added to the header of other requests | email, username, password |
+| **Projects** |  POST  | /projects          | Adds a new project, returns the added project                               | token                     |
+|              |  GET   | /projects          | Returns a list of projects                                                  | token                     |
+|              |  GET   | /projects/:id      | Returns a project based on id                                               | token                     |
+|              |  GET   | /projects/user/:id | Returns projects of user by user id                                         | token                     |
+|              |  PUT   | /projects/:id      | Update with changes to a project by id                                      | token                     |
+|              | DELETE | /projects/:id      | Deletes the project board by id                                             | token                     |
