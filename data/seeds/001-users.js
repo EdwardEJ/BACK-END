@@ -1,6 +1,7 @@
 exports.seed = function (knex) {
   const users = [
     {
+      id: 1,
       username: 'test',
       email: 'test@email.com',
       password: 'password',
