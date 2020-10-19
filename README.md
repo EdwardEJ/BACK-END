@@ -92,7 +92,7 @@
 |    Route     | Method | Endpoint       | Description                                                                 | Required                  |
 | :----------: | :----: | -------------- | --------------------------------------------------------------------------- | ------------------------- |
 |   **Auth**   |  POST  | /auth/register | Creates a new user                                                          | email, username, password |
-|              |  POST  | /auth/login    | Logs in a user, returns a token to be added to the header of other requests | username, password        |
+|              |  POST  | /auth/login    | Logs in a user, returns a token to be added to the header of other requests | email, username, password |
 | **Projects** |  GET   | /projects      | Returns a list of projects                                                  | token                     |
 |              |  GET   | /projects/:id  | Returns projects of user by user id                                         | token                     |
 |              |  POST  | /projects      | Adds a new project, returns the added project                               | token                     |
