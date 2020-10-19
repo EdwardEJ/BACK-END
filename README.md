@@ -24,7 +24,7 @@
 
 ```
 {
-  "data": {
+  {
     "id": 1,
     "username": "example"
     "email": "example@email.com",
@@ -62,8 +62,8 @@
 
 ```
 {
-  "project_name": "example",
-  "project_description": "lorem ipsum lorem ipsum",
+  "project_name": "test",
+  "project_description": "testing",
   "project_goal": 50000
 }
 ```
@@ -72,10 +72,12 @@
 
 ```
 {
-  "data": {
-    "id": 1,
-    "project_name": "example",
-    "
+  {
+    "id": 7,
+    "project_name": "test",
+    "project_description": "testing",
+    "project_goal": 50000,
+    "user_id": 2
   }
 }
 ```
