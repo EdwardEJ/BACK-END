@@ -6,7 +6,7 @@
 
 #### Axios call for registering a new user:
 
-`axios.post(https://virtualrealityfunding.herokuapp.com/api/auth/register)`
+`axios.post(https://virtualrealityfunding.herokuapp.com/auth/register)`
 
 - Required fields to register:
 
@@ -18,6 +18,7 @@
   "email": "example@email.com",
   "password": "password",
   "roles": ["role1, role2"]
+}
 ```
 
 ###### Returns:
@@ -33,7 +34,7 @@
 }
 ```
 
-`axiosWithAuth().post(https://virtualrealityfunding.herokuapp.com/api/auth/login, credentials)`
+`axiosWithAuth().post(https://virtualrealityfunding.herokuapp.com/auth/login, credentials)`
 
 - Required fields to login:
 
@@ -84,7 +85,7 @@
 
 #### Axios call for registering a new user:
 
-`axios.get(https://virtualrealityfunding.herokuapp.com/api/projects)` (requires token)
+`axios.get(https://virtualrealityfunding.herokuapp.com/projects)` (requires token)
 
 ## Endpoints
 
@@ -94,5 +95,5 @@
 |              |  POST  | /auth/login    | Logs in a user, returns a token to be added to the header of other requests | username, password        |
 | **Projects** |  GET   | /projects      | Returns a list of projects                                                  | token                     |
 |              |  GET   | /projects/:id  | Returns projects of user by user id                                         | token                     |
-|              |  POST  | /projects      | Adds a new project, returns the added board                                 | token                     |
-|              | DELETE | /projects/:id  | Deletes the specified board by id                                           | token                     |
+|              |  POST  | /projects      | Adds a new project, returns the added project                               | token                     |
+|              | DELETE | /projects/:id  | Deletes the project board by id                                             | token                     |
